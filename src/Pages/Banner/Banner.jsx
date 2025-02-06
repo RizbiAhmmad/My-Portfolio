@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaInstagram, FaReact, FaDatabase, FaNodeJs } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp, FaReact, FaDatabase, FaNodeJs } from "react-icons/fa";
 import { SiFirebase, SiTailwindcss } from "react-icons/si";
 import image from "../../assets/photo 2.jpeg";
 
 const Banner = () => {
   return (
-    <div className="min-h-screen flex items-center bg-[#0D0D2B] text-white">
+    <div id="home" className="min-h-screen flex items-center bg-[#0D0D2B] text-white">
       <div className="container mx-auto px-10 flex flex-col-reverse lg:flex-row items-center gap-10 lg:justify-between">
         
         {/* Left Side - Text Content */}
@@ -75,7 +75,7 @@ const Banner = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="mt-6 flex gap-4 justify-center lg:justify-center">
+          <div className="mt-6 flex gap-4 justify-center">
             <a href="/resume.pdf" download>
               <motion.button
                 className="px-6 py-3 bg-purple-600 text-white rounded-lg font-medium flex items-center gap-2"
@@ -97,15 +97,15 @@ const Banner = () => {
           </div>
 
           {/* Social Icons */}
-          <div className="mt-6 flex gap-6 justify-center lg:justify-center text-gray-400 text-2xl">
-            <motion.a href="https://github.com" target="_blank" whileHover={{ scale: 1.2 }}>
+          <div className="mt-6 flex gap-6 justify-center text-gray-400 text-2xl">
+            <motion.a href="https://github.com/RizbiAhmmad" target="_blank" whileHover={{ scale: 1.2 }}>
               <FaGithub />
             </motion.a>
-            <motion.a href="https://linkedin.com" target="_blank" whileHover={{ scale: 1.2 }}>
+            <motion.a href="https://www.linkedin.com/in/rizbi-ahmmad-064481304/" target="_blank" whileHover={{ scale: 1.2 }}>
               <FaLinkedin />
             </motion.a>
-            <motion.a href="https://instagram.com" target="_blank" whileHover={{ scale: 1.2 }}>
-              <FaInstagram />
+            <motion.a href="https://wa.me/01815109616" target="_blank" whileHover={{ scale: 1.2 }}>
+              <FaWhatsapp className="text-green-500" />
             </motion.a>
           </div>
         </motion.div>

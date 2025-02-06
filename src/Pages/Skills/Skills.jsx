@@ -6,7 +6,7 @@ import { BiLogoVisualStudio } from "react-icons/bi"; // VSCode Icon
 
 const Skills = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-[#0D0D2B] text-white px-4 py-6">
+    <div id="skills" className="min-h-screen flex flex-col items-center justify-center bg-[#0D0D2B] text-white px-4 py-6">
       <div className="w-full max-w-4xl text-center">
         {/* Skills Header */}
         <motion.h2

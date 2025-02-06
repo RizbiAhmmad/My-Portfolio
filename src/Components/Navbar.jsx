@@ -9,6 +9,8 @@ const Navbar = () => {
   const links = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
+    { href: "#skills", label: "Skills" },
+    { href: "#education", label: "Education" },
     { href: "#projects", label: "Projects" },
     { href: "#contact", label: "Contact" }
   ];
@@ -31,6 +33,7 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -40,13 +43,10 @@ const Navbar = () => {
     <nav className="bg-[#0D0D2B] text-white shadow-md w-full fixed top-0 z-50">
       <div className="container mx-auto px-10">
         <div className="flex items-center justify-between h-16">
-          {/* Left Side - Logo and Name */}
           <div className="flex items-center space-x-3">
             <img src={logo} alt="Logo" className="h-10" />
-            <span className="text-xl font-bold">Rizbi Ahmmad</span>
           </div>
 
-          {/* Right Side - Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             {links.map((link) => (
               <a
@@ -54,14 +54,27 @@ const Navbar = () => {
                 href={link.href}
                 className={`font-semibold transition-colors duration-200 hover:text-sky-500 hover:underline hover:underline-offset-8 
                   ${activeLink === link.href ? "text-purple-500 underline underline-offset-8" : "text-white"}`}
-                onClick={() => setActiveLink(link.href)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setActiveLink(link.href);
+                  document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 {link.label}
               </a>
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          <div className="hidden md:block">
+            <a
+              href="/path-to-resume.pdf"
+              download
+              className="bg-purple-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-opacity-90 transition-colors"
+            >
+              Download Resume
+            </a>
+          </div>
+
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -75,7 +88,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
         <div
           className={`md:hidden transition-all duration-500 ease-out transform ${
             isOpen
@@ -98,6 +110,13 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <a
+              href="/path-to-resume.pdf"
+              download
+              className="bg-purple-500 text-white px-4 py-2 rounded-lg text-sm text-center hover:bg-opacity-90 transition-colors"
+            >
+              Download Resume
+            </a>
           </div>
         </div>
       </div>
