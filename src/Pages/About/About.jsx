@@ -4,7 +4,7 @@ import { FaLaptopCode, FaGamepad, FaMusic, FaGlobe } from "react-icons/fa";
 
 const About = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#0D0D2B] text-white px-4">
+    <div className="min-h-screen flex items-center justify-center bg-[#0D0D2B] text-white px-4 py-4">
       <div className="w-full max-w-3xl text-center">
         
         {/* About Me Content */}
@@ -84,7 +84,7 @@ const About = () => {
           >
             <h3 className="text-xl font-semibold text-white">A Little About Me ✨</h3>
             <p className="text-gray-200 mt-2">
-              Outside of programming, I’m a firm believer that creativity thrives in many areas. Whether it’s **painting**, **music**, or **gaming**, I try to bring my unique personality to everything I do. I’m always looking to learn new things and apply them in creative ways. My curiosity drives me to explore, and my love for problem-solving keeps me engaged.
+              Outside of programming, I’m a firm believer that creativity thrives in many areas. Whether it’s **music**, or **gaming**, I try to bring my unique personality to everything I do. I’m always looking to learn new things and apply them in creative ways. My curiosity drives me to explore, and my love for problem-solving keeps me engaged.
             </p>
           </motion.div>
         </motion.div>
