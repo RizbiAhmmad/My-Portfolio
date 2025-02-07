@@ -10,6 +10,7 @@ import Education from "../Pages/Education/Education";
 import Project1Details from "../Pages/Projects/Project1Details";
 import Project2Details from "../Pages/Projects/Project2Details";
 import Project3Details from "../Pages/Projects/Project3Details";
+import Contact from "../Pages/Contact/Contact";
 
   export const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ import Project3Details from "../Pages/Projects/Project3Details";
         {
           path: "education",
           element: <Education></Education>
+        },
+        {
+          path: "contact",
+          element: <Contact></Contact>
         }
       ]
     },
