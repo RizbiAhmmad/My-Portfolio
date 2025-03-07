@@ -1,14 +1,24 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaWhatsapp, FaReact, FaDatabase, FaNodeJs } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaWhatsapp,
+  FaReact,
+  FaDatabase,
+  FaNodeJs,
+} from "react-icons/fa";
 import { SiFirebase, SiTailwindcss } from "react-icons/si";
 import image from "../../assets/photo 2.jpeg";
+import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
   return (
-    <div id="home" className="min-h-screen flex items-center bg-[#0D0D2B] text-white">
+    <div
+      id="home"
+      className="min-h-screen flex items-center bg-[#0D0D2B] text-white"
+    >
       <div className="container mx-auto px-10 flex flex-col-reverse lg:flex-row items-center gap-10 lg:justify-between">
-        
         {/* Left Side - Text Content */}
         <motion.div
           className="text-center lg:text-left max-w-xl"
@@ -17,24 +27,21 @@ const Banner = () => {
           transition={{ duration: 0.8 }}
         >
           {/* Welcome Message */}
-          <motion.h2
-            className="text-2xl lg:text-3xl font-semibold text-gray-300 mb-4"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            Hi, I'm <span className="text-purple-500">Rizbi Ahmmad</span>!  
-          </motion.h2>
-
+          <h2 className="text-2xl lg:text-3xl font-semibold text-gray-300 mb-4">
+            Hi, I'm{" "}
+            <span className="text-purple-500">
+              <Typewriter words={["Rizbi Ahmmad"]} loop={Infinity} cursor />
+            </span>
+          </h2>
           <motion.p
             className="text-lg text-gray-400 mb-6"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Passionate about building interactive, scalable, and modern web applications.
+            Passionate about building interactive, scalable, and modern web
+            applications.
           </motion.p>
-
           {/* Tagline */}
           <motion.div
             className="bg-[#1E1E50] px-4 py-1 inline-block rounded-full text-sm mb-4"
@@ -44,23 +51,40 @@ const Banner = () => {
           >
             🚀 Ready to Innovate
           </motion.div>
-
           <h1 className="text-5xl lg:text-6xl font-bold">
-            <span className="text-white">Frontend</span> <span className="text-purple-500">Developer</span>
+            <span className="text-white">Frontend</span>{" "}
+            <span className="text-purple-500">Developer</span>
           </h1>
-          <p className="text-lg mt-3 text-gray-300">JavaScript & React Enthusiast</p>
-          <p className="mt-4 text-gray-400">
-            "Designing dynamic, intuitive, and engaging websites that deliver seamless digital experiences."
+          <p className="text-lg mt-3 text-purple-400">
+            <Typewriter
+              words={["MERN Stack Expert", "JavaScript & React Enthusiast"]}
+              loop={Infinity}
+              cursor
+            />
           </p>
-
+          <p className="mt-4 text-gray-400">
+            "Designing dynamic, intuitive, and engaging websites that deliver
+            seamless digital experiences."
+          </p>
           {/* Tech Stack Badges with Icons */}
           <div className="flex flex-wrap gap-3 mt-5">
-            {[
-              { name: "React", icon: <FaReact className="text-blue-500" /> },
-              { name: "Tailwind", icon: <SiTailwindcss className="text-teal-400" /> },
-              { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
-              { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
-              { name: "MongoDB", icon: <FaDatabase className="text-green-500" /> }
+            {[{ name: "React", icon: <FaReact className="text-blue-500" /> },
+              {
+                name: "Tailwind",
+                icon: <SiTailwindcss className="text-teal-400" />,
+              },
+              {
+                name: "Firebase",
+                icon: <SiFirebase className="text-yellow-500" />,
+              },
+              {
+                name: "Node.js",
+                icon: <FaNodeJs className="text-green-500" />,
+              },
+              {
+                name: "MongoDB",
+                icon: <FaDatabase className="text-green-500" />,
+              },
             ].map((tech, index) => (
               <motion.span
                 key={index}
@@ -73,7 +97,6 @@ const Banner = () => {
               </motion.span>
             ))}
           </div>
-
           {/* Action Buttons */}
           <div className="mt-6 flex gap-4 justify-center">
             <a href="/resume.pdf" download>
@@ -85,7 +108,7 @@ const Banner = () => {
                 Resume ↗
               </motion.button>
             </a>
-            <a href="mailto:rizbi@example.com">
+            <a href="mailto:contact.rizbi123@gmail.com">
               <motion.button
                 className="px-6 py-3 bg-[#1E1E50] text-gray-300 rounded-lg font-medium flex items-center gap-2"
                 whileHover={{ scale: 1.1 }}
@@ -95,16 +118,27 @@ const Banner = () => {
               </motion.button>
             </a>
           </div>
-
           {/* Social Icons */}
           <div className="mt-6 flex gap-6 justify-center text-gray-400 text-2xl">
-            <motion.a href="https://github.com/RizbiAhmmad" target="_blank" whileHover={{ scale: 1.2 }}>
+            <motion.a
+              href="https://github.com/RizbiAhmmad"
+              target="_blank"
+              whileHover={{ scale: 1.2 }}
+            >
               <FaGithub />
             </motion.a>
-            <motion.a href="https://www.linkedin.com/in/rizbi-ahmmad-064481304/" target="_blank" whileHover={{ scale: 1.2 }}>
+            <motion.a
+              href="https://www.linkedin.com/in/rizbi-ahmmad-064481304/"
+              target="_blank"
+              whileHover={{ scale: 1.2 }}
+            >
               <FaLinkedin />
             </motion.a>
-            <motion.a href="https://wa.me/01815109616" target="_blank" whileHover={{ scale: 1.2 }}>
+            <motion.a
+              href="https://wa.me/01815109616"
+              target="_blank"
+              whileHover={{ scale: 1.2 }}
+            >
               <FaWhatsapp className="text-green-500" />
             </motion.a>
           </div>

@@ -46,9 +46,9 @@ const Projects = () => {
   const navigate = useNavigate();
 
   return (
-    <div id="projects" className="bg-[#0D0D2B] py-16">
+    <div id="projects" className="bg-[#0D0D2B] py-12">
       <motion.h2
-        className="text-4xl font-extrabold text-center text-purple-500 mb-4"
+        className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 text-transparent bg-clip-text mb-8 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}

@@ -6,14 +6,14 @@ import { BiLogoVisualStudio } from "react-icons/bi"; // VSCode Icon
 
 const Skills = () => {
   return (
-    <div id="skills" className="min-h-screen flex flex-col items-center justify-center bg-[#0D0D2B] text-white px-4 py-6">
+    <div id="skills" className="min-h-screen flex flex-col items-center justify-center bg-[#0D0D2B] text-white px-6">
       <div className="w-full max-w-4xl text-center">
         {/* Skills Header */}
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 text-transparent bg-clip-text mb-10"
+          className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 text-transparent bg-clip-text mb-8 text-center py-12"
         >
           My Skills
         </motion.h2>

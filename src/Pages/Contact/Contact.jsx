@@ -80,7 +80,7 @@ const Contact = () => {
         {showModal && <SuccessModal />}
         {/* Overall Section Heading and Subheading */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-semibold text-white">
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 text-transparent bg-clip-text mb-8 text-center">
             Get in Touch
           </h2>
           <p className="text-lg text-gray-400">
@@ -122,7 +122,7 @@ const Contact = () => {
               />
               <button
                 type="submit"
-                className="w-full bg-primary text-white py-3 rounded-md hover:bg-[#e0003d] hover:text-white transition duration-300"
+                className="w-full bg-primary text-white py-3 border border-purple-700 rounded-md hover:bg-[#e0003d] hover:text-white transition duration-300"
               >
                 Send Message
               </button>
