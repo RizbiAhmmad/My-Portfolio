@@ -67,7 +67,7 @@ const Navbar = () => {
 
           <div className="hidden md:block">
             <a
-              href="/path-to-resume.pdf"
+              href="https://drive.google.com/file/d/1daDcBddFZlK4QQDtgh_UFvIJlM60b7sK/view?usp=sharing"
               download
               className="bg-purple-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-opacity-90 transition-colors"
             >

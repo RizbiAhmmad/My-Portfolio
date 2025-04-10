@@ -5,7 +5,7 @@ import { DiMongodb } from "react-icons/di";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import picture1 from "../../assets/E-learning.jpeg";
-import picture2 from "../../assets/DreamBPL.jpeg";
+import picture2 from "../../assets/Group Study.png";
 import picture3 from "../../assets/GadgetHeaven.jpeg";
 
 const techIcons = {
@@ -24,7 +24,7 @@ const projects = [
     link: "/project1-details",
   },
   {
-    title: "DreamBPL",
+    title: "Group Study",
     image: picture2,
     tech: ["React","Node.js", "Tailwind CSS"],
     link: "/project2-details",

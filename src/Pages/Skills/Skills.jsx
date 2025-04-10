@@ -27,7 +27,7 @@ const Skills = () => {
           <h3 className="text-3xl font-semibold text-white mb-4">Frontend Development</h3>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8 justify-center">
             {/* Frontend Icons */}
-            {[
+            {[ 
               { name: "HTML5", icon: <FaHtml5 className="text-orange-500 text-4xl" /> },
               { name: "CSS3", icon: <FaCss3Alt className="text-blue-500 text-4xl" /> },
               { name: "JavaScript", icon: <FaJs className="text-yellow-500 text-4xl" /> },
@@ -36,7 +36,7 @@ const Skills = () => {
             ].map((skill, index) => (
               <motion.div
                 key={index}
-                className="flex flex-col items-center justify-center bg-gradient-to-r from-[#141e30] to-[#243b55] p-4 rounded-lg shadow-lg text-white"
+                className="flex flex-col items-center justify-center bg-gradient-to-r from-[#141e30] to-[#243b55] p-4 rounded-lg shadow-lg text-white border-2 border-transparent hover:border-purple-500 transition-all duration-300 hover:scale-105"
                 whileHover={{ scale: 1.1 }}
               >
                 {skill.icon}
@@ -56,14 +56,14 @@ const Skills = () => {
           <h3 className="text-3xl font-semibold text-white mb-4">Backend Development</h3>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8 justify-center">
             {/* Backend Icons */}
-            {[
+            {[ 
               { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-4xl" /> },
               { name: "MongoDB", icon: <FaDatabase className="text-green-700 text-4xl" /> },
               { name: "Express", icon: <FaServer className="text-gray-400 text-4xl" /> }
             ].map((skill, index) => (
               <motion.div
                 key={index}
-                className="flex flex-col items-center justify-center bg-gradient-to-r from-[#141e30] to-[#243b55] p-4 rounded-lg shadow-lg text-white"
+                className="flex flex-col items-center justify-center bg-gradient-to-r from-[#141e30] to-[#243b55] p-4 rounded-lg shadow-lg text-white border-2 border-transparent hover:border-purple-500 transition-all duration-300 hover:scale-105"
                 whileHover={{ scale: 1.1 }}
               >
                 {skill.icon}
@@ -83,14 +83,14 @@ const Skills = () => {
           <h3 className="text-3xl font-semibold text-white mb-4">Tools & Technologies</h3>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8 justify-center">
             {/* Tools Icons */}
-            {[
+            {[ 
               { name: "Git", icon: <FaGitAlt className="text-red-500 text-4xl" /> },
               { name: "GitHub", icon: <FaGithub className="text-black text-4xl" /> },
               { name: "VSCode", icon: <BiLogoVisualStudio className="text-blue-500 text-4xl" /> } // VSCode Icon
             ].map((skill, index) => (
               <motion.div
                 key={index}
-                className="flex flex-col items-center justify-center bg-gradient-to-r from-[#141e30] to-[#243b55] p-4 rounded-lg shadow-lg text-white"
+                className="flex flex-col items-center justify-center bg-gradient-to-r from-[#141e30] to-[#243b55] p-4 rounded-lg shadow-lg text-white border-2 border-transparent hover:border-purple-500 transition-all duration-300 hover:scale-105"
                 whileHover={{ scale: 1.1 }}
               >
                 {skill.icon}

@@ -1,18 +1,20 @@
 import { motion } from "framer-motion";
 import { FaReact, FaGithub, FaLink, FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { SiTailwindcss } from "react-icons/si";
-import banner from "../../assets/DreamBPL.jpeg";
+import { SiTailwindcss, SiMongodb, SiExpress, SiFirebase } from "react-icons/si";
+import banner from "../../assets/Group Study.png";
 
 const techIcons = [
   { name: "React", icon: <FaReact className="text-blue-400 text-2xl" /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-300 text-2xl" /> },
-  { name: "React Toastify", icon: <span className="text-orange-400 text-xl">🔥</span> },
+  { name: "Express.js", icon: <SiExpress className="text-gray-400 text-2xl" /> },
+  { name: "MongoDB", icon: <SiMongodb className="text-green-400 text-2xl" /> },
+  { name: "Firebase", icon: <SiFirebase className="text-yellow-400 text-2xl" /> },
 ];
 
-const Project2Details = () => {
+const ProjectGroupStudy = () => {
   return (
-    <div id="project2-details" className="mt-5 px-6 max-w-7xl mx-auto">
+    <div id="project-group-study" className="mt-5 px-6 max-w-7xl mx-auto">
       {/* Back Button */}
       <Link to={'/'}>
         <button className="btn py-1 px-3 bg-purple-600 cursor-pointer rounded-2xl text-white font-bold my-3 flex justify-center items-center gap-2 fixed z-10">
@@ -29,7 +31,7 @@ const Project2Details = () => {
       >
         <img
           src={banner}
-          alt="Dream-BPL Hero"
+          alt="Group Study Hero"
           className="w-full rounded-2xl shadow-lg mb-8"
         />
       </motion.div>
@@ -39,7 +41,7 @@ const Project2Details = () => {
         <h3 className="text-2xl font-semibold mb-4 text-purple-500">Live Demo</h3>
         <div className="flex justify-center gap-4 mb-6 flex-wrap">
           <a
-            href="https://a7-rizbi-dream-bpl.netlify.app/"
+            href="https://group-study-platform.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="underline flex justify-center items-center gap-2 hover:text-purple-400"
@@ -47,7 +49,7 @@ const Project2Details = () => {
             <FaLink /> Live Project
           </a>
           <a
-            href="https://github.com/RizbiAhmmad/Dream-BPL_Website"
+            href="https://github.com/RizbiAhmmad/Group-Study-Platform"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -63,10 +65,11 @@ const Project2Details = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        Dream-BPL: Player Selection App
+        📚 Group Study - Collaborative Learning Platform
       </motion.h2>
       <p className="text-lg text-black mb-8 leading-relaxed">
-        The Player Selection App allows users to choose players within a set budget. Users can manage their team, track coin balance in real-time, and receive instant notifications for their actions.
+        Group Study is a collaborative platform designed to connect students for effective learning.
+        Users can join study groups, submit assignments, and get real-time feedback—all within a secure and responsive interface.
       </p>
 
       {/* Tech Stack */}
@@ -90,10 +93,13 @@ const Project2Details = () => {
       <div className="mb-8">
         <h3 className="text-2xl font-semibold mb-4 text-purple-500">Features</h3>
         <ul className="list-disc pl-5 text-black space-y-2">
-          <li>📝 Select up to 6 players for your team</li>
-          <li>💰 Real-time coin balance tracking</li>
-          <li>⚠️ Prevents overspending beyond budget</li>
-          <li>🔔 Instant toast notifications for actions</li>
+          <li>🔐 Secure user authentication with Firebase and JWT</li>
+          <li>🔒 Private routes for authorized access only</li>
+          <li>📄 Assignment submission & tracking</li>
+          <li>👨‍👩‍👧‍👦 Create & join study groups</li>
+          <li>📝 Evaluation system with feedback & grades</li>
+          <li>⏳ Pending assignments tracker</li>
+          <li>🌙 Light/Dark mode toggle</li>
           <li>📱 Fully responsive UI for all devices</li>
         </ul>
       </div>
@@ -102,23 +108,24 @@ const Project2Details = () => {
       <div className="mb-8">
         <h3 className="text-2xl font-semibold mb-4 text-purple-500">Challenges Faced</h3>
         <ul className="list-disc pl-5 text-black space-y-2">
-          <li>⚙️ Implementing real-time coin tracking without lag</li>
-          <li>📱 Ensuring smooth responsiveness across different screen sizes</li>
-          <li>🔧 Managing efficient state updates while preventing unnecessary re-renders</li>
+          <li>⚙️ Managing user roles (students vs teachers)</li>
+          <li>📤 Real-time assignment tracking & submission validation</li>
+          <li>🎯 Building a secure, scalable authentication system</li>
         </ul>
       </div>
 
-      {/* Potential Improvements & Future Plans */}
+      {/* Future Plans */}
       <div className="mb-8">
         <h3 className="text-2xl font-semibold mb-4 text-purple-500">Potential Improvements & Future Plans</h3>
         <ul className="list-disc pl-5 text-black space-y-2">
-          <li>🚀 Adding AI-based player recommendations</li>
-          <li>💳 Introducing in-app purchases for premium features</li>
-          <li>📊 Enhancing the UI/UX with animations and dark mode</li>
+          <li>📊 Add group analytics and leaderboard system</li>
+          <li>🤖 AI-based study partner recommendations</li>
+          <li>🎯 Role-based dashboard with analytics</li>
+          <li>🎨 Better animations using Framer Motion and Lottie</li>
         </ul>
       </div>
     </div>
   );
 };
 
-export default Project2Details;
+export default ProjectGroupStudy;

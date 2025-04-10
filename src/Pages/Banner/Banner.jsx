@@ -99,7 +99,7 @@ const Banner = () => {
           </div>
           {/* Action Buttons */}
           <div className="mt-6 flex gap-4 justify-center">
-            <a href="/resume.pdf" download>
+            <a href="https://drive.google.com/file/d/1daDcBddFZlK4QQDtgh_UFvIJlM60b7sK/view?usp=sharing" download>
               <motion.button
                 className="px-6 py-3 bg-purple-600 text-white rounded-lg font-medium flex items-center gap-2"
                 whileHover={{ scale: 1.1 }}
