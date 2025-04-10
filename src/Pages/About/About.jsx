@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaLaptopCode, FaGamepad, FaMusic, FaGlobe } from "react-icons/fa";
-import image from "../../assets/Image1.jpg"
+import image from "../../assets/Image1.jpg";
 
 const About = () => {
   return (
@@ -27,9 +27,9 @@ const About = () => {
           className="flex justify-center"
         >
           <img 
-            src={image} // Replace with your actual image URL
+            src={image}
             alt="Rizbi Ahmmad" 
-            className="w-70 h-70 md:w-80 md:h-80 rounded-full object-cover shadow-lg border-4 border-purple-500"
+            className="w-80 h-[28rem]  object-cover border-4 border-purple-500 shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-shadow duration-300 rounded-4xl"
           />
         </motion.div>
 
@@ -42,7 +42,7 @@ const About = () => {
         >
           {/* Introduction */}
           <p className="text-gray-300 text-lg leading-relaxed">
-            Hi! I'm <span className="text-purple-400 font-semibold">Rizbi Ahmmad</span>, a Frontend Developer passionate about crafting modern, interactive, and user-friendly web applications.  
+            I'm <span className="text-purple-400 font-semibold">Rizbi Ahmmad</span>, a Frontend Developer passionate about crafting modern, interactive, and user-friendly web applications.  
           </p>
 
           {/* Programming Journey */}

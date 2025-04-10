@@ -4,7 +4,7 @@ import { SiTailwindcss, SiExpress } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import picture1 from "../../assets/E-learning.jpeg";
+import picture1 from "../../assets/E-learning-1.jpeg";
 import picture2 from "../../assets/Group Study.png";
 import picture3 from "../../assets/GadgetHeaven.jpeg";
 
@@ -20,19 +20,19 @@ const projects = [
   {
     title: "E-Learning",
     image: picture1,
-    tech: ["React", "Node.js","Express", "MongoDB", "Tailwind CSS"],
+    tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
     link: "/project1-details",
   },
   {
     title: "Group Study",
     image: picture2,
-    tech: ["React","Node.js", "Tailwind CSS"],
+    tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
     link: "/project2-details",
   },
   {
     title: "Gadget Heaven",
     image: picture3,
-    tech: ["React","Node.js", "Tailwind CSS"],
+    tech: ["React", "Node.js", "Tailwind CSS"],
     link: "/project3-details",
   },
 ];
@@ -68,7 +68,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="relative bg-[#1E1E50] rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300"
+            className="relative bg-[#1E1E50] rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 hover:shadow-[0_0_15px_6px_rgba(255,255,255,0.3)]"
             initial="hidden"
             animate="visible"
             variants={cardVariants}
@@ -80,13 +80,15 @@ const Projects = () => {
               className="w-full h-80 object-cover rounded-t-2xl"
             />
             <div className="p-6">
-              <h3 className="text-2xl font-semibold text-white mb-3">{project.title}</h3>
+              <h3 className="text-2xl font-semibold text-white mb-3 hover:text-gradient-to-r from-purple-500 via-blue-500 to-pink-500 cursor-pointer">
+                {project.title}
+              </h3>
               <div className="flex gap-3 mb-4">
                 {project.tech.map((tech, idx) => (
                   <motion.div
                     key={idx}
                     title={tech}
-                    className="bg-gray-800 px-3 py-1 rounded-lg text-white flex items-center gap-2 text-sm"
+                    className="bg-gray-800 px-3 py-1 rounded-lg text-white flex items-center gap-2 text-sm transform hover:scale-110 transition duration-200"
                     whileHover={{ scale: 1.1 }}
                   >
                     {techIcons[tech] || <span>{tech}</span>}
@@ -95,7 +97,7 @@ const Projects = () => {
               </div>
               <motion.button
                 onClick={() => navigate(project.link)}
-                className="w-full bg-purple-600 text-white py-3 rounded-lg shadow-md hover:bg-opacity-90 transition font-medium"
+                className="w-full bg-purple-600 text-white py-3 rounded-lg shadow-md hover:bg-opacity-90 transition font-medium transform hover:scale-105"
                 whileHover={{ y: -3 }}
               >
                 View Project

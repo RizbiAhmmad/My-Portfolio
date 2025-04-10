@@ -33,7 +33,7 @@ const Education = () => {
   return (
     <div
       id="education"
-      className="min-h-fit flex flex-col items-center justify-center bg-[#0D0D2B] text-white px-6 "
+      className="min-h-fit flex flex-col items-center justify-center bg-[#0D0D2B] text-white px-6"
     >
       {/* Animated Header */}
       <motion.h2
@@ -55,15 +55,23 @@ const Education = () => {
             transition={{ duration: 1, delay: index * 0.3 }}
             className={`relative p-8 rounded-xl shadow-lg bg-gradient-to-r ${edu.gradient} 
                         flex flex-col items-center justify-center text-center 
-                        transform transition-all duration-300 hover:scale-105`}
+                        transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-${edu.gradient.split(" ")[0].slice(4)}-500`}
           >
             {/* Icon */}
-            <div className="mb-4 p-4 bg-white/20 rounded-full">{edu.icon}</div>
+            <div className="mb-4 p-4 bg-white/20 rounded-full transform transition-all duration-300 hover:scale-110 hover:text-yellow-400">
+              {edu.icon}
+            </div>
 
             {/* Content */}
-            <h3 className="text-2xl font-semibold text-white mb-2">{edu.degree}</h3>
-            <p className="text-gray-200 text-lg">{edu.institution}</p>
-            <p className="text-gray-300 mt-2">{edu.year}</p>
+            <h3 className="text-2xl font-semibold text-white mb-2 transition-transform duration-300 transform hover:scale-110">
+              {edu.degree}
+            </h3>
+            <p className="text-gray-200 text-lg transition-transform duration-300 transform hover:scale-105">
+              {edu.institution}
+            </p>
+            <p className="text-gray-300 mt-2 transition-transform duration-300 transform hover:scale-105">
+              {edu.year}
+            </p>
           </motion.div>
         ))}
       </div>
