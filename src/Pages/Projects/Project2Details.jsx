@@ -12,7 +12,7 @@ const techIcons = [
   { name: "Firebase", icon: <SiFirebase className="text-yellow-400 text-2xl" /> },
 ];
 
-const ProjectGroupStudy = () => {
+const Project2Details = () => {
   return (
     <div id="project-group-study" className="mt-5 px-6 max-w-7xl mx-auto">
       {/* Back Button */}
@@ -39,22 +39,29 @@ const ProjectGroupStudy = () => {
       {/* Live Demo Section */}
       <div className="mb-8 text-center">
         <h3 className="text-2xl font-semibold mb-4 text-purple-500">Live Demo</h3>
-        <div className="flex justify-center gap-4 mb-6 flex-wrap">
-          <a
-            href="https://group-study-platform.netlify.app/"
+        <div className="flex justify-center gap-6 mb-6 flex-wrap">
+          <motion.a
+            href="https://online-group-study-83565.web.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline flex justify-center items-center gap-2 hover:text-purple-400"
+            className="bg-gradient-to-r from-blue-500 to-cyan-400 text-white py-3 px-6 rounded-lg shadow-lg hover:shadow-[0_0_15px_rgba(59,130,246,0.7)] transition-all duration-300 font-medium flex items-center justify-center gap-2 text-sm"
+            whileHover={{ scale: 1.1, y: -3 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <FaLink /> Live Project
-          </a>
-          <a
-            href="https://github.com/RizbiAhmmad/Group-Study-Platform"
+            <FaLink className="text-lg" />
+            Live Project
+          </motion.a>
+          <motion.a
+            href="https://github.com/RizbiAhmmad/Online-Group-Study-Website-Client"
             target="_blank"
             rel="noopener noreferrer"
+            className="bg-gradient-to-r from-gray-700 to-gray-900 text-white py-3 px-6 rounded-lg shadow-lg hover:shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-300 font-medium flex items-center justify-center gap-2 text-sm"
+            whileHover={{ scale: 1.1, y: -3 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <FaGithub className="text-3xl hover:text-purple-400" />
-          </a>
+            <FaGithub className="text-lg" />
+            GitHub
+          </motion.a>
         </div>
       </div>
 
@@ -128,4 +135,4 @@ const ProjectGroupStudy = () => {
   );
 };
 
-export default ProjectGroupStudy;
+export default Project2Details;

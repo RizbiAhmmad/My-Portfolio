@@ -40,22 +40,29 @@ const Project1Details = () => {
       {/* Live Demo Section */}
       <div className="mb-8 text-center">
         <h3 className="text-2xl font-semibold mb-4 text-purple-500">Live Demo</h3>
-        <div className="flex justify-center gap-4 mb-6 flex-wrap">
-          <a
+        <div className="flex justify-center gap-6 mb-6 flex-wrap">
+          <motion.a
             href="https://e-learning-f11fe.web.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline flex justify-center items-center gap-2 hover:text-purple-400"
+            className="bg-gradient-to-r from-blue-500 to-cyan-400 text-white py-3 px-6 rounded-lg shadow-lg hover:shadow-[0_0_15px_rgba(59,130,246,0.7)] transition-all duration-300 font-medium flex items-center justify-center gap-2 text-sm"
+            whileHover={{ scale: 1.1, y: -3 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <FaLink /> Live Project
-          </a>
-          <a
+            <FaLink className="text-lg" />
+            Live Project
+          </motion.a>
+          <motion.a
             href="https://github.com/RizbiAhmmad/E-Learning-Website-Client"
             target="_blank"
             rel="noopener noreferrer"
+            className="bg-gradient-to-r from-gray-700 to-gray-900 text-white py-3 px-6 rounded-lg shadow-lg hover:shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-300 font-medium flex items-center justify-center gap-2 text-sm"
+            whileHover={{ scale: 1.1, y: -3 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <FaGithub className="text-3xl hover:text-purple-400" />
-          </a>
+            <FaGithub className="text-lg" />
+            GitHub
+          </motion.a>
         </div>
       </div>
 

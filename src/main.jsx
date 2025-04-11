@@ -6,9 +6,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { router } from './routes/routes';
+import { SnowfallProvider } from './Snowfall/SnowfallContext';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <SnowfallProvider>
+      <RouterProvider router={router} />
+    </SnowfallProvider>
   </StrictMode>,
 )

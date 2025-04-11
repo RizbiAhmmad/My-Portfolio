@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { FaReact, FaNodeJs } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaExternalLinkAlt, FaInfoCircle } from "react-icons/fa";
 import { SiTailwindcss, SiExpress } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 import { motion } from "framer-motion";
@@ -21,18 +21,21 @@ const projects = [
     title: "E-Learning",
     image: picture1,
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+    liveDemo: "https://e-learning-f11fe.web.app",
     link: "/project1-details",
   },
   {
     title: "Group Study",
     image: picture2,
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+    liveDemo: "https://online-group-study-83565.web.app/",
     link: "/project2-details",
   },
   {
     title: "Gadget Heaven",
     image: picture3,
     tech: ["React", "Node.js", "Tailwind CSS"],
+    liveDemo: "https://assignment08-gadgets-haven.netlify.app/",
     link: "/project3-details",
   },
 ];
@@ -83,7 +86,7 @@ const Projects = () => {
               <h3 className="text-2xl font-semibold text-white mb-3 hover:text-gradient-to-r from-purple-500 via-blue-500 to-pink-500 cursor-pointer">
                 {project.title}
               </h3>
-              <div className="flex gap-3 mb-4">
+              <div className="flex gap-3 mb-6">
                 {project.tech.map((tech, idx) => (
                   <motion.div
                     key={idx}
@@ -95,13 +98,28 @@ const Projects = () => {
                   </motion.div>
                 ))}
               </div>
-              <motion.button
-                onClick={() => navigate(project.link)}
-                className="w-full bg-purple-600 text-white py-3 rounded-lg shadow-md hover:bg-opacity-90 transition font-medium transform hover:scale-105"
-                whileHover={{ y: -3 }}
-              >
-                View Project
-              </motion.button>
+              <div className="flex gap-4">
+                <motion.a
+                  href={project.liveDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-gradient-to-r from-blue-500 to-cyan-400 text-white py-3 px-4 rounded-lg shadow-lg hover:shadow-[0_0_10px_rgba(59,130,246,0.7)] transition-all duration-300 font-medium flex items-center justify-center gap-2 text-sm"
+                  whileHover={{ y: -3, scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <FaExternalLinkAlt className="text-lg" />
+                  Live Demo
+                </motion.a>
+                <motion.button
+                  onClick={() => navigate(project.link)}
+                  className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-4 rounded-lg shadow-lg hover:shadow-[0_0_10px_rgba(147,51,234,0.7)] transition-all duration-300 font-medium flex items-center justify-center gap-2 text-sm"
+                  whileHover={{ y: -3, scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <FaInfoCircle className="text-lg" />
+                  View Details
+                </motion.button>
+              </div>
             </div>
           </motion.div>
         ))}
