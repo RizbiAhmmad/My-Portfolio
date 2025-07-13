@@ -155,7 +155,7 @@ const Banner = () => {
           <motion.img
             src={image}
             alt="Profile"
-            className="w-full max-w-[300px] sm:max-w-[400px] h-auto object-contain"
+            className="w-full mt-12 max-w-[300px] sm:max-w-[400px] h-auto object-contain rounded-lg"
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.6 }}

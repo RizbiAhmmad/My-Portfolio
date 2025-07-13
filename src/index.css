@@ -117,8 +117,20 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    cursor: inherit; /* Ensure all elements inherit the cursor */
   }
   body {
     @apply bg-background text-foreground;
+    cursor: default; 
+  }
+
+  /* Override for clickable elements */
+  a, button {
+    cursor: pointer; /* Standard pointer for links and buttons */
+  }
+
+  /* Override for text inputs */
+  input, textarea, select {
+    cursor: text; /* Standard text cursor for inputs */
   }
 }
