@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom"; // Added useNavigate and Link
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/R-logo.jpg";
 import { FaSnowflake } from "react-icons/fa";
 import { SnowfallContext } from "../Snowfall/SnowfallContext";
@@ -10,10 +10,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("/");
   const { isSnowfallActive, toggleSnowfall } = useContext(SnowfallContext);
-  const navigate = useNavigate(); // For programmatic navigation
+  const navigate = useNavigate();
 
   const links = [
-    { href: "/", label: "Home" }, // Changed from #home to /
+    { href: "/", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#skills", label: "Skills" },
     { href: "#education", label: "Education" },
@@ -26,7 +26,6 @@ const Navbar = () => {
       const scrollPosition = window.scrollY;
 
       links.forEach((link) => {
-        // Handle root path (/) separately
         if (link.href === "/") {
           if (scrollPosition < 100) {
             setActiveLink("/");
@@ -50,16 +49,13 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [links]);
 
   const handleLinkClick = (href, e) => {
     e.preventDefault();
     setActiveLink(href);
-    setIsOpen(false); // Close mobile menu
+    setIsOpen(false);
 
     if (href === "/") {
       navigate("/");
@@ -71,15 +67,17 @@ const Navbar = () => {
 
   return (
     <nav className="bg-[#0D0D2B] text-white shadow-md w-full fixed top-0 z-50">
-      <div className="container mx-auto px-4 sm:px-10">
+      <div className="container px-4 mx-auto sm:px-10">
         <div className="flex items-center justify-between h-16">
+          {/* Logo */}
           <div className="flex items-center space-x-3">
             <Link to="/" onClick={() => setActiveLink("/")}>
               <img src={logo} alt="Logo" className="h-10" />
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Menu */}
+          <div className="items-center hidden space-x-8 md:flex">
             {links.map((link) => (
               <a
                 key={link.href}
@@ -97,7 +95,8 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center space-x-6">
+          {/* Desktop Buttons */}
+          <div className="items-center hidden space-x-6 md:flex">
             <motion.button
               onClick={toggleSnowfall}
               className={`p-3 rounded-full transition-all duration-300 flex items-center justify-center
@@ -118,7 +117,11 @@ const Navbar = () => {
                   isSnowfallActive
                     ? {
                         rotate: [0, 360],
-                        transition: { repeat: Infinity, duration: 4, ease: "linear" },
+                        transition: {
+                          repeat: Infinity,
+                          duration: 4,
+                          ease: "linear",
+                        },
                       }
                     : {}
                 }
@@ -126,19 +129,20 @@ const Navbar = () => {
                 <FaSnowflake className="text-xl" />
               </motion.div>
             </motion.button>
+
             <a
-              href="https://drive.google.com/file/d/1daDcBddFZlK4QQDtgh_UFvIJlM60b7sK/view?usp=sharing"
-              download
-              className="bg-purple-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-opacity-90 transition-colors"
+              href="/resume.pdf"
+              download="Rizbi_Ahmmad_Resume.pdf"
+              className="px-4 py-2 text-sm text-white transition-colors bg-purple-500 rounded-lg hover:bg-opacity-90"
             >
               Download Resume
             </a>
           </div>
-
+          {/* Mobile Menu Toggle */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="focus:outline-none p-2 rounded-lg hover:bg-gray-100"
+              className="p-2 rounded-lg focus:outline-none hover:bg-gray-100"
               aria-label="Toggle menu"
             >
               <div
@@ -160,6 +164,7 @@ const Navbar = () => {
           </div>
         </div>
 
+        {/* Mobile Menu */}
         <div
           className={`md:hidden transition-all duration-500 ease-out transform ${
             isOpen
@@ -181,6 +186,8 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+
+            {/* Snow Button (Mobile) */}
             <motion.button
               onClick={toggleSnowfall}
               className={`p-3 rounded-full transition-all duration-300 flex items-center justify-center mx-auto
@@ -201,7 +208,11 @@ const Navbar = () => {
                   isSnowfallActive
                     ? {
                         rotate: [0, 360],
-                        transition: { repeat: Infinity, duration: 4, ease: "linear" },
+                        transition: {
+                          repeat: Infinity,
+                          duration: 4,
+                          ease: "linear",
+                        },
                       }
                     : {}
                 }
@@ -209,10 +220,11 @@ const Navbar = () => {
                 <FaSnowflake className="text-xl" />
               </motion.div>
             </motion.button>
+
             <a
-              href="https://drive.google.com/file/d/1daDcBddFZlK4QQDtgh_UFvIJlM60b7sK/view?usp=sharing"
-              download
-              className="bg-purple-500 text-white px-4 py-2 rounded-lg text-sm text-center hover:bg-opacity-90 transition-colors"
+              href="/resume.pdf"
+              download="Rizbi_Ahmmad_Resume.pdf"
+              className="px-4 py-2 text-sm text-center text-white transition-colors bg-purple-500 rounded-lg hover:bg-opacity-90"
             >
               Download Resume
             </a>

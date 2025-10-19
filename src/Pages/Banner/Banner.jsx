@@ -18,23 +18,23 @@ const Banner = () => {
       id="home"
       className="min-h-screen flex items-center bg-[#0D0D2B] text-white"
     >
-      <div className="container mx-auto px-4 sm:px-10 flex flex-col-reverse lg:flex-row items-center gap-6 lg:gap-10 lg:justify-between">
+      <div className="container flex flex-col-reverse items-center gap-6 px-4 mx-auto sm:px-10 lg:flex-row lg:gap-10 lg:justify-between">
         {/* Left Side - Text Content */}
         <motion.div
-          className="text-center lg:text-left max-w-xl w-full"
+          className="w-full max-w-xl text-center lg:text-left"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
           {/* Welcome Message */}
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-300 mb-4">
+          <h2 className="mb-4 text-xl font-semibold text-gray-300 sm:text-2xl lg:text-3xl">
             Hi, I'm{" "}
             <span className="text-purple-500">
               <Typewriter words={["Rizbi Ahmmad"]} loop={Infinity} cursor />
             </span>
           </h2>
           <motion.p
-            className="text-base sm:text-lg text-gray-400 mb-6"
+            className="mb-6 text-base text-gray-400 sm:text-lg"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
@@ -51,23 +51,23 @@ const Banner = () => {
           >
             🚀 Ready to Innovate
           </motion.div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
-            <span className="text-white">Frontend</span>{" "}
+          <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">
+            <span className="text-white">MERN Stack</span>{" "}
             <span className="text-purple-500">Developer</span>
           </h1>
-          <p className="text-base sm:text-lg mt-3 text-purple-400">
+          <p className="mt-3 text-base text-purple-400 sm:text-lg">
             <Typewriter
               words={["MERN Stack Expert", "JavaScript & React Enthusiast"]}
               loop={Infinity}
               cursor
             />
           </p>
-          <p className="mt-4 text-gray-400 text-sm sm:text-base">
+          <p className="mt-4 text-sm text-gray-400 sm:text-base">
             "Designing dynamic, intuitive, and engaging websites that deliver
             seamless digital experiences."
           </p>
           {/* Tech Stack Badges with Icons */}
-          <div className="flex flex-wrap gap-2 sm:gap-3 mt-5 justify-center lg:justify-start">
+          <div className="flex flex-wrap justify-center gap-2 mt-5 sm:gap-3 lg:justify-start">
             {[
               { name: "React", icon: <FaReact className="text-blue-500" /> },
               {
@@ -99,10 +99,10 @@ const Banner = () => {
             ))}
           </div>
           {/* Action Buttons */}
-          <div className="mt-6 flex gap-4 justify-center">
-            <a href="https://drive.google.com/file/d/1daDcBddFZlK4QQDtgh_UFvIJlM60b7sK/view?usp=sharing" download>
+          <div className="flex justify-center gap-4 mt-6">
+            <a href="/resume.pdf" download="Rizbi_Ahmmad_Resume.pdf">
               <motion.button
-                className="px-4 sm:px-6 py-2 sm:py-3 bg-purple-600 text-white rounded-lg font-medium flex items-center gap-2 text-sm sm:text-base"
+                className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg sm:px-6 sm:py-3 sm:text-base"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -120,7 +120,7 @@ const Banner = () => {
             </a>
           </div>
           {/* Social Icons */}
-          <div className="mt-6 flex gap-6 justify-center text-gray-400 text-xl sm:text-2xl">
+          <div className="flex justify-center gap-6 mt-6 text-xl text-gray-400 sm:text-2xl">
             <motion.a
               href="https://github.com/RizbiAhmmad"
               target="_blank"

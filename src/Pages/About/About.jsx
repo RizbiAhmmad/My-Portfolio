@@ -12,12 +12,12 @@ const About = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 text-transparent bg-clip-text mb-8 text-center"
+        className="mb-8 text-4xl font-bold text-center text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 bg-clip-text"
       >
         About Me
       </motion.h2>
 
-      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div className="grid items-center w-full max-w-5xl grid-cols-1 gap-10 md:grid-cols-2">
         
         {/* Profile Image */}
         <motion.div
@@ -41,27 +41,27 @@ const About = () => {
           className="text-center md:text-left"
         >
           {/* Introduction */}
-          <p className="text-gray-300 text-lg leading-relaxed">
-            I'm <span className="text-purple-400 font-semibold">Rizbi Ahmmad</span>, a Frontend Developer passionate about crafting modern, interactive, and user-friendly web applications.  
+          <p className="text-lg leading-relaxed text-gray-300">
+            I'm <span className="font-semibold text-purple-400">Rizbi Ahmmad</span>, a MERN Stack Developer passionate about crafting modern, interactive, and user-friendly web applications.  
           </p>
 
           {/* Programming Journey */}
-          <p className="text-gray-300 mt-3">
+          <p className="mt-3 text-gray-300">
             My journey began with HTML & CSS, then JavaScript sparked my curiosity. Learning React.js transformed my approach, making development more structured and exciting. Now, I specialize in React, Tailwind CSS, and MongoDB, always striving to build efficient and visually appealing applications.
           </p>
 
           {/* Work Preference */}
-          <p className="text-gray-300 mt-3">
+          <p className="mt-3 text-gray-300">
             I enjoy building beautiful, responsive, and dynamic interfaces that enhance user experiences. Bringing ideas to life through code is what excites me the most.
           </p>
 
           {/* Hobbies & Interests */}
-          <p className="text-gray-300 mt-3">
+          <p className="mt-3 text-gray-300">
             Beyond coding, I love gaming, exploring new technologies, listening to music, and traveling. These hobbies keep me creative and inspire my work.
           </p>
 
           {/* Hobby Icons */}
-          <div className="mt-4 flex flex-wrap gap-3 justify-center md:justify-start">
+          <div className="flex flex-wrap justify-center gap-3 mt-4 md:justify-start">
             {[
               { name: "Gaming", icon: <FaGamepad className="text-green-300" /> },
               { name: "Music", icon: <FaMusic className="text-blue-300" /> },
