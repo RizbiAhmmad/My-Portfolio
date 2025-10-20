@@ -18,7 +18,7 @@ const Snowfall = ({ isActive }) => {
     }));
     setSnowflakes(newSnowflakes);
 
-    return () => setSnowflakes([]);
+    // return () => setSnowflakes([]);
   }, [isActive]);
 
   if (!isActive) return null;

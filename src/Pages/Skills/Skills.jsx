@@ -15,17 +15,17 @@ import { SiTailwindcss } from "react-icons/si";
 import { BiLogoVisualStudio } from "react-icons/bi";
 
 const skills = [
-  { icon: <FaHtml5 className="text-orange-500 text-2xl" />, name: "HTML5" },
-  { icon: <FaCss3Alt className="text-blue-500 text-2xl" />, name: "CSS3" },
-  { icon: <FaJs className="text-yellow-400 text-2xl" />, name: "JavaScript" },
-  { icon: <FaReact className="text-cyan-400 text-2xl" />, name: "React" },
-  { icon: <SiTailwindcss className="text-teal-300 text-2xl" />, name: "Tailwind" },
-  { icon: <FaNodeJs className="text-green-500 text-2xl" />, name: "Node.js" },
-  { icon: <FaServer className="text-gray-300 text-2xl" />, name: "Express" },
-  { icon: <FaDatabase className="text-green-700 text-2xl" />, name: "MongoDB" },
-  { icon: <FaGitAlt className="text-red-500 text-2xl" />, name: "Git" },
-  { icon: <FaGithub className="text-white text-2xl" />, name: "GitHub" },
-  { icon: <BiLogoVisualStudio className="text-blue-500 text-2xl" />, name: "VSCode" },
+  { icon: <FaHtml5 className="text-2xl text-orange-500" />, name: "HTML5" },
+  { icon: <FaCss3Alt className="text-2xl text-blue-500" />, name: "CSS3" },
+  { icon: <FaJs className="text-2xl text-yellow-400" />, name: "JavaScript" },
+  { icon: <FaReact className="text-2xl text-cyan-400" />, name: "React" },
+  { icon: <SiTailwindcss className="text-2xl text-teal-300" />, name: "Tailwind" },
+  { icon: <FaNodeJs className="text-2xl text-green-500" />, name: "Node.js" },
+  { icon: <FaServer className="text-2xl text-gray-300" />, name: "Express" },
+  { icon: <FaDatabase className="text-2xl text-green-700" />, name: "MongoDB" },
+  { icon: <FaGitAlt className="text-2xl text-red-500" />, name: "Git" },
+  { icon: <FaGithub className="text-2xl text-white" />, name: "GitHub" },
+  { icon: <BiLogoVisualStudio className="text-2xl text-blue-500" />, name: "VSCode" },
 ];
 
 const Skills = () => {
@@ -67,10 +67,10 @@ const Skills = () => {
       </motion.div>
 
       {/* Center Text */}
-      <div className="absolute text-center px-4">
-        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 text-transparent bg-clip-text">My Skills</h3>
-        {/* <p className="text-xs sm:text-sm text-gray-400 mt-1">Tools that make my projects come to life</p> */}
-        <div className="h-1 w-24 sm:w-32 mx-auto mt-2 bg-gradient-to-r from-green-400 to-purple-400 rounded-full shadow-sm"></div>
+      <div className="absolute px-4 text-center">
+        <h3 className="text-xl font-bold text-transparent sm:text-2xl md:text-3xl bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 bg-clip-text">My Skills</h3>
+        {/* <p className="mt-1 text-xs text-gray-400 sm:text-sm">Tools that make my projects come to life</p> */}
+        <div className="w-24 h-1 mx-auto mt-2 rounded-full shadow-sm sm:w-32 bg-gradient-to-r from-green-400 to-purple-400"></div>
       </div>
     </div>
   );
